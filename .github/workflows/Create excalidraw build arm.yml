@@ -50,7 +50,8 @@ jobs:
         with:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          platforms: linux/arm64
+          builder: ${{ steps.buildx.outputs.name }}
+          platforms: linux/amd64,linux/arm,linux/arm64
           push: true
           context: .
           cache-from: type=gha
