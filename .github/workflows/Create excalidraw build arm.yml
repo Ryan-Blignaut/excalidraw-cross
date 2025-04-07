@@ -22,7 +22,12 @@ jobs:
         uses: actions/checkout@v4
         with:
          repository: excalidraw/excalidraw
-      
+     
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@master
+        with:
+          platforms: all
+          
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@v3.3.0
       
