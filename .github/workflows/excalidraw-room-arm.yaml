@@ -11,6 +11,10 @@ env:
 jobs:
   build:
     uses: ./.github/workflows/build-and-push.yml
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     with:
       source-repo: excalidraw/excalidraw-room
       image-tag: excalidraw-room
