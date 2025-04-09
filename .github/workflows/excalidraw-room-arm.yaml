@@ -1,4 +1,4 @@
-name: Docker Image CD
+name: excalidraw-room-arm
 
 on:
   schedule:
